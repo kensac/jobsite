@@ -1,9 +1,7 @@
 import puppeteer from "puppeteer";
 import Levels from "../models/levelsModel.js";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
 
-dotenv.config();
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
