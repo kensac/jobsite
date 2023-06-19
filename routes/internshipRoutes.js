@@ -8,7 +8,7 @@ dotenv.config();
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-    res.send('Hello from internship route');
+    res.render('internships',{internships: await fetch('http://localhost:3000/internal/internships').then(res => res.json())});
 }
 );
 

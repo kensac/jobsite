@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                <img src="logo.svg" alt=""  width="40" height="32">
+            </a>
+          </div>
+    
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2">Home</a></li>
+            <li><a href="#" class="nav-link px-2 link-secondary">Internships</a></li>
+          </ul>
+    
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-primary me-2">Login</button>
+            <button type="button" class="btn btn-primary">Sign-up</button>
+          </div>
+        </header>
+      </div>
+
+      <table class="table table-hover w-75 mx-auto table-sm">
+        <thead>
+            <tr>
+              <th scope="col">Company <br> Location - Term</th>
+              <th scope="col">Hourly Pay <br> Monthly Pay</th>
+              <th scope="col">Details</th>
+              <th scope="col">Apply</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <% internships.forEach(function(internship) { %>
+                <tr>
+                    <td>
+
+                        <p><%= internship.name %><p>
+                        <p><%= internship.location %> - <%= internship.terms %></p>
+
+                    </td>
+                    <td>
+
+                        <p><%= internship.salaryHourly %>$/hr<p>
+                        <p><%= internship.salaryMonthly %>$/month</p>
+
+                    </td>
+                    <td>
+
+                        <p><%= internship.additional %></p>
+
+                    </td>
+                    <td>
+
+                        <a class="btn btn-primary" href= <%= internship.link %> role="button">Apply</a>
+                    </td>
+                </tr>
+            <% }); %>
+          </tbody>
+      </table>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+  </body>
+</html>
