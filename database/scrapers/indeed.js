@@ -5,8 +5,6 @@ const indeed = async () => {
     const page = await browser.newPage();
 
     await page.goto('https://www.indeed.com/jobs?q=software+engineer&l=United+States');
-    
-
 
 }
 
